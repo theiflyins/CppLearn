@@ -114,3 +114,32 @@ int Chapter1::exercise5_10()
     }
     return 0;
 }
+
+int Chapter1::exercise6_1()
+{
+    using namespace std;
+    char* tmp = new char[256];
+    char* ans = new char[256];
+    bool flag = true;
+    while (flag)
+    {
+        cin >> tmp;
+        int i = 0;
+        int j = 0;
+        for (i = 0; i < strlen(tmp)+1; i++)
+        {
+            if (isdigit(tmp[i]))
+            {
+                continue;
+            }
+            ans[j++] = toupper(tmp[i]);
+        }
+        if (strcmp(ans,"@") == 0)
+        {
+            break;
+        }
+
+        cout<<ans<<endl;
+    }
+    return 0;
+}
